@@ -1,0 +1,837 @@
+body{
+    /* display: flex; */
+    margin: auto;
+    background-image: url(./images/BBhome.jpg);
+}
+
+/* TOP NAVBAR */
+.navbar-container {
+    display: flex;
+    margin-top: -16px;
+    position: absolute;
+    width: 100%;
+    justify-content: center; /* Center the navbar container */
+}
+
+.nav_links {
+    background-color: #DB3414;
+    display: flex; /* Changed from inline-block to flex */
+    width: 100%;
+    justify-content: center; /* Center the nav links */
+    align-items: center;
+    margin: auto;
+    float: right;
+    position: fixed;
+    overflow-x: hidden;
+    height: 130px;
+    top:0;
+    z-index: 10;
+}
+
+.nav_links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center; /* Center the list items */
+}
+.addcart{
+    display: block;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.addcart button{
+    position: fixed;
+    z-index: 12;
+    float: right;
+    display: flex;
+    right: 0;
+    margin-right: 50px;
+    padding: 30px;
+    background: transparent;
+    border: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    top: 0;
+    margin-top: 20px;
+}
+.bigboss-logo {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: fixed;
+    z-index: 10;
+    margin-top: -70px;
+    left: 0; /* Keep the logo on the left */
+}
+
+.nav_links li {
+    font-family: "Varela Round", sans-serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px; /* Added horizontal margin to space out the items */
+}
+
+.nav_links a {
+    font-weight: bolder;
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.nav_links li:hover a {
+    transform: scale(1.3);
+    transition: 0.3s;
+    color: yellow;
+}
+
+
+/* BANNERS */
+.allbanner-container {
+    display: block;
+    flex-direction: column; /* Stack all child containers vertically */
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    /* height: 1000px; */
+    /* width: 1500px; */
+    /* margin: auto; */
+    
+}
+
+.promo-container,
+.hotdogburgerbanner-container,
+.sidedrink-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    /* margin-bottom: 10px; */
+}
+.bundle-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+}
+.hotdogburgerbanner-container {
+    flex-direction: column; /* Stack hotdog and burger banners vertically */
+}
+
+.sidedrink-container {
+    display: flex;
+    justify-content: center;
+    gap: 0; /* Adjust the gap to reduce space between banners */
+    width: 100%;
+}
+
+.sidemeal-banner,
+.drink-banner, .bundle-banner {
+    margin: 0; /* Remove any additional margins */
+}
+
+.promo-banner:hover, .hotdog-banner:hover, .burger-banner:hover, .sidemeal-banner:hover,
+.drink-banner:hover, .bundle-banner:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+.bot-nav{
+    background-color: #DB3414;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    bottom: 0;
+    
+}
+
+.bot-nav ul{
+    font-family: "Varela Round", sans-serif;
+    font-weight: bolder;
+    font-size: 1.3em;
+    list-style-type: none;
+    cursor: pointer;
+    display: flex;
+}
+.bot-nav a{
+    color:  white;
+    text-decoration: none;
+    display: flex;
+    padding: 0 40px;
+
+}
+
+
+
+.bot-nav ul li:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+.bot-nav ul li:active{
+    color: yellow;
+}
+
+
+
+
+
+/* ____________________________________SELECT MENU______________________________________________________ */
+
+.selectmenu {
+    display: flex; /* Use Flexbox for layout */
+}
+.sidebar {
+    position: relative;
+    max-width: 200px;
+    display: block;
+    height: 600px;
+    left: 120px;
+    margin-top: 150px;
+}
+.sidebar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DB3414;
+    padding: 20px;
+    width: 220px;
+    height: 90px;
+    margin-bottom: 40px;
+    border: none;
+    
+}
+.sidebar a {
+    font-family: "Varela Round", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+#hotdogs-button:hover, 
+#burgers-button:hover, 
+#sidemeal-button:hover, 
+#drinks-button:hover, 
+#bundles-button:hover,
+#ricemeal-button:hover,
+#pastameal-button:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#hotdogs-button a:hover, 
+#burgers-button a:hover, 
+#sidemeal-button a:hover, 
+#drinks-button a:hover, 
+#bundles-button a:hover,
+#ricemeal-button a:hover,
+#pastameal-button a:hover {
+    color:yellow;
+}
+
+
+
+.selectmenu-box {
+    background-image: url(./images/yellowbg.png); /* Background image */
+    background-size: cover; /* Ensure background covers entire area */
+    max-width: 900px;
+    /* height: 1400px;  */
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+.hotdogitemcontainer, .burgeritemcontainer, .sidemealitemcontainer, .ricemealitemcontainer, .drinksitemcontainer, .bundlesitemcontainer, .pastamealitemcontainer  {
+    flex-grow: 1; /* Allow it to grow to take up available space */
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    display: grid;
+    max-width: 900px;
+    height: 1200px; /* Fixed height */
+    padding: 20px;
+    row-gap: 30px; /* Fixed vertical gap */
+    column-gap: 20px; /* Fixed horizontal gap */
+}
+.selectmenu-box img, .itemcontainer {
+    align-items: center;
+}
+.itemcontainer {
+    display: flex;
+    flex-direction: column; /* Ensure contents stack vertically */
+    background: white;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center; /* Center contents vertically */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+.hotdogitem, .burger-item,
+.sidemeal-item, .ricemeal-item, .pastameal-item, 
+.drinks-item,
+.bundles-item {
+    display: flex; /* Ensure contents are centered within .hotdog-item */
+    flex-direction: column; /* Stack contents vertically */
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.itemcontainer button {
+    font-family: "Varela Round", sans-serif;
+    display: block;
+    margin: auto;
+}
+.itemcontainer a {
+    font-family: "Varela Round", sans-serif;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+    /* font-size: 1em; */
+}
+.itemcontainer img {
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-family: "Varela Round", sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+
+.addtocart{
+    font-family: "Varela Round", sans-serif;
+    font-weight: bold;
+    /* font-size: 1.2em; */
+    border: none;
+    /* padding: 7px; */
+    position: relative;
+    background: transparent;
+    display: block;
+    cursor: pointer;
+    color: white;
+}
+.addtocart:hover{
+    /* transform: scale(1.1); */
+    transition: 0.7s;
+    color: yellow;
+}
+select{
+    border: #DB3414;
+    cursor: pointer;
+}
+
+.price-select {
+    font-family: "Varela Round", sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    padding: 5px;
+    font-size: 1em;
+    background: transparent;
+    margin-bottom: 17px;
+    outline: #DB3414;
+
+}
+.price-select svg{
+    position: absolute;
+    z-index: 100;
+}
+
+.addbutton {
+    --width: 100px;
+    --height: 35px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #DB3414;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+  }
+  
+  .addbutton::before {
+    position: absolute;
+    /* content: attr(data-tooltip); */
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #555;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+  }
+  
+  .addbutton::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #FFA300;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  }
+  
+  .addbutton::after,.addbutton::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  .addtext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .addbutton-wrapper,.addtext,.addicon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .addtext {
+    top: 0;
+
+  }
+  
+  .addtext,.addicon {
+    transition: top 0.5s;
+  }
+  
+  .addicon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .addicon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .addbutton:hover {
+    background: #FFA300;
+  }
+  
+  .addbutton:hover .addtext {
+    top: -100%;
+  }
+  
+  .addbutton:hover .addicon {
+    top: 0;
+  }
+  
+  .addbutton:hover:before,.addbutton:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .addbutton:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  }
+  
+  .addbutton:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  }
+  
+/* ____________________________________CART_____________________________________________________ */
+
+/* .cart-container {
+
+    display: flexbox;
+    flex-direction: column;
+}
+
+.cart {
+    margin-top: 150px;
+    display: flex;
+    position: relative;
+    background: white;
+    
+    float: right;
+    right: 10px;
+    width: 600px;
+    height: 800px;
+    flex-direction: row;
+}
+
+.cart-box {
+    justify-content: center;
+    display: flex;
+}
+.cart-box span{
+    font-family: "Varela Round", sans-serif;
+    padding: 20px;
+} */
+
+.cart-container {
+    /* border:1px solid #E0E4CC; */
+    /* border-radius:5px; */
+    font-family: "Varela Round", sans-serif;
+    margin-top:150px;
+    padding:1em;
+    position: fixed;
+    float: right;
+    right: -100%;
+    width: 560px;
+    /* height: 800px; */
+    background: white;
+    display: none;
+    align-items: center;
+    margin-left: auto ;
+    margin-right: auto ;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+    z-index: 1000;
+  }
+.cart-container.show{
+    display: block;
+    right: 20px;
+    transform: translateX(0);
+}
+  .cart-container button, input[type="submit"] { 
+      border:1px solid yellow; 
+      color:#fff; 
+      background: #DB3414; 
+      padding:0.6em 1em;
+      font-size:1em; 
+      line-height:1; 
+      border-radius: 1.2em;
+      transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  }
+  .cart-container button:hover, .cart-container button:focus, .cart-container button:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
+      background: yellow;
+      border:4px solid #DB3414;
+      color:#000;
+      font-weight: bold;
+      cursor: pointer;
+  }
+.cart-container h2{
+    text-align: center;
+}
+  .cart-container hr{
+    height: 3px;
+    background: #DB3414;
+    border: 3px;
+  }
+  .cart-container table {
+    margin-bottom:1em;
+    border-collapse:collapse;
+  }
+  .cart-container table td, .cart-container table th {
+    text-align:left;
+    padding:0.25em 1em;
+    border-bottom:1px solid #E0E4CC;
+  }
+  #carttotals {
+    margin-right:0;
+    margin-left:auto;
+  }
+  .cart-buttons {
+    width:auto;
+    margin-right:0;
+    margin-left:auto;
+    display:flex;
+    justify-content:flex-end;
+    padding:1em 0;
+  }
+  #emptycart {
+    margin-right:1em;
+  }
+  .cart-container table td:nth-last-child(1) {
+    text-align:right;
+  }
+  .message {
+    border-width: 1px 0px;
+    border-style:solid;
+    border-color:#A7DBD8;
+    color:#679996;
+    padding:0.5em 0;
+    margin:1em 0;
+    position: absolute;
+  }
+
+.alerts {
+    position: absolute;
+    display: block;
+    
+}
+
+option {
+    color: #DB3414;
+    font-weight: bold;
+}
+
+/* ____________________________________STORE PAGE_____________________________________________________ */
+.store-content2{
+  display: block;
+}
+
+.imageslider-container {
+  font-family: "Varela Round", sans-serif;
+  display: inline-block;
+  top: 260px;
+  width: 600px;
+  left: 100px;
+  margin: auto;
+  position: absolute;
+  background: transparent ;
+  overflow: hidden;
+}
+.imageslider-container2 {
+  display: inline-block;
+  top: 1050px; /* Adjusted to move it down */
+  width: 600px;
+  right: 100px;
+  margin: auto;
+  position: absolute;
+  background: transparent;
+  overflow: hidden;
+}
+.description{
+  font-family: "Varela Round", sans-serif;
+  /* float: right; */
+  display: block;
+  margin-left: 750px;
+  position: relative;
+}
+.description2{
+  font-family: "Varela Round", sans-serif;
+  /* float: right; */
+  display: block;
+  text-align: right;
+  margin-right: 750px;
+  position: relative;
+}
+
+.store-name{
+  font-family: "Varela Round", sans-serif;
+  font-weight: bolder;
+  font-size: 3em;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  /* margin: auto; */
+  padding: 30px;
+  margin-top: 130px;
+  position: relative;
+}
+.store-name2{
+  font-family: "Varela Round", sans-serif;
+  font-weight: bolder;
+  font-size: 3em;
+  display: block;
+  text-align: right;
+  justify-content: center;
+  /* margin: auto; */
+  padding: 30px;
+  margin-top: 130px;
+  position: relative;
+}
+.store-content b, .store-content2 b{
+  display: block;
+  font-size: 1.6em;
+  
+}
+.store-content a, .store-content2 a{
+  display: block;
+  font-size: 1.4em;
+}
+
+.imageslider-container img, .imageslider-container2 img {
+  /* width: 100%; */
+  /* height: 100%;  */
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: fade 1s;
+  display: none;
+}
+
+.imageslider-container img:first-child,
+.imageslider-container2 img:first-child {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  z-index: 9;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.arrow-left {
+  left: 2%;
+}
+
+.arrow-right {
+  right: 2%;
+}
+
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+
+
+}
+
+.dot {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+@keyframes fade {
+  from { opacity: 0.1; }
+  to { opacity: 1; }
+}
+.followus {
+  display: block;
+  width: 50%;
+  margin-left: 19%;
+  margin-top: 20px;
+}
+
+.followus2 {
+  display: block;
+  width: 50%;
+  margin-left: 31%;
+  margin-top: 20px;
+}
+.followus h1, .followus2 h1{
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 25px;
+  letter-spacing: 4px;
+  padding: 200px 0 100px;
+  color: #007cc4;
+  text-align: center;
+
+}
+.Social-media{
+  display: flex;
+  justify-content: center;
+}
+.followus a, .followus2 a{
+  display: flex;
+  /* background: #fff; */
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  /* box-shadow: 6px 6px 10px -1px rgba(0,124,196,0.15),
+              -6px -6px 10px -1px rgba(255,255,255,0.7);
+  border: 1px solid rgba(0, 124, 196, 0); */
+  transition: transform 0.5s
+}
+.followus a i, .followus2 a i{
+  font-size: 50px;
+  color:#DB3414;
+  transition: transform 0.5s;
+}
+.followus a:hover, .followus2 a:hover{
+  /* box-shadow:inset 4px 4px 6px -2px rgba(0,0,0,0.2),
+              inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                    -0.5px -0.5px 0px -1px rgba(255,255,255,1),
+                    0.5px 0.5px 0px rgba(0,0,0,0.15),
+                    0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 124, 196, 0.1); */
+  transform: translateY(2px);
+}
+.followus a:hover i{
+  transform: scale(1.2);
+}
+.followus a:hover .fa-facebook{
+  color: #3b5998;
+}
+.followus a:hover .fa-twitter{
+  color: #00acee;
+}
+.followus a:hover .fa-whatsapp{
+  color: #4fce5d;
+}
+.followus a:hover .fa-instagram{
+  color: #ff5a67;
+}
+.followus a:hover .fa-youtube{
+  color: #f00;
+}
+
+.gmap{
+  display: inline-block;
+  z-index: 9;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+  width: 700px;
+}
+.gmap:hover{
+  transform: scale(1.5);
+  background-image: url(images/gmapstikay.PNG); 
+}
+
+.pulilan{
+  display: block;
+}
+.pulilanpic{
+  display: flex;
+}
+

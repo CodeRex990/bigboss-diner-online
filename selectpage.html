@@ -1,0 +1,1468 @@
+<!DOCtype html>
+<head>
+    <title>BIGBOSS Mockup Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+
+    <body>
+<!-- BIGBOSS NAVIGATION BAR -->
+    <div class="navbar-container">
+        <div class="addcart">
+            <button id="addcart-btn" onclick="myFunction()"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+              </svg>
+               <span id="cart-count">0</span></button>
+        </div>
+
+            <ul class="nav_links">
+                <a href="#"> <img src="images/BBlogosmall.png" class="bigboss-logo" width="15%" ></a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selectpage.html" style="transform: scale(1.3); transition: 0.3s; color: yellow;">Menu</a></li>
+                <li><a href="./storepage.html">Stores</a></li>
+                <!-- <li><a href="#">Orders</a></li> -->
+            </ul>
+    </div>
+
+    <div class="cart-container">
+        <h2>BIGBOSS Cart</h2>
+        <table>
+          <thead>
+            <tr>
+            <th><strong>Product</strong></th>
+            <th><strong>Price</strong></th>
+          </tr>
+          </thead>
+          <tbody id="carttable">
+          </tbody>
+        </table>
+        <hr>
+        <table id="carttotals">
+          <tr>
+            <td><strong>Items</strong></td>
+            <td><strong>Total</strong></td>
+          </tr>
+          <tr>
+            <td>x <span id="itemsquantity">0</span></td>
+           
+            <td>₱<span id="total">0</span></td>
+          </tr></table>
+
+          
+        <div class="cart-buttons">  
+          <button id="emptycart">Empty Cart</button>
+          <button id="checkout">Checkout</button>
+        </div>
+      </div>
+
+      <div id="alerts"></div>
+
+
+
+<div class="selectmenu">
+    <div class="sidebar">
+                <button id="hotdogs-button"><a href="#">HOTDOGS</a></button>
+                <button id="burgers-button"><a href="#">BURGERS</a></button>
+                <button id="sidemeal-button"><a href="#">SIDE MEALS</a></button>
+                <button id="ricemeal-button"><a href="#">RICE MEALS</a></button>
+                <button id="pastameal-button"><a href="#">PASTA MEALS</a></button>
+                <button id="drinks-button"><a href="#">DRINKS</a></button>
+                <button id="bundles-button"><a href="#">BUNDLES</a></button>
+    </div>
+
+ <div class="selectmenu-box">
+
+
+        <div class="hotdogitemcontainer">
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh1.png" style="width: 150px;">
+                        <a class="productname" >CLASSIC HOTDOG</a>
+                        <select class="price-select">
+                            <option value="55">₱55.00 - 6 INCHES</option>
+                            <option value="69">₱69.00 - 9 INCHES</option>
+                            <option value="145">₱145.00 - 18 INCHES</option>
+                        </select>
+                        
+                        <!-- <p class="price">₱55.00</p> -->
+                                <button class="addtocart">
+                                    <div class="addbutton">
+                                    <div class="addbutton-wrapper">
+                                    <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                        <span class="addicon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                    </svg>
+                                        </span>
+                                    </div>
+                                    </div>
+                                </button> 
+                    </div>
+                </div>
+                
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh2.png" style="width: 150px;">
+                        <a class="productname" >CHEESETOP HOTDOG</a>
+                        <select class="price-select">
+                            <option value="65">₱65.00 - 6 INCHES</option>
+                            <option value="79">₱79.00 - 9 INCHES</option>
+                            <option value="165">₱165.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+                
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh3.png" style="width: 150px;">
+                        <a class="productname" >VEGGIE SHAWARMA</a>
+                        <select class="price-select">
+                            <option value="69">₱69.00 - 6 INCHES</option>
+                            <option value="89">₱89.00 - 9 INCHES</option>
+                            <option value="179">₱179.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh4.png" style="width: 150px;">
+                        <a class="productname" >RANCH HOTDOG</a>
+                        <select class="price-select">
+                            <option value="69">₱69.00 - 6 INCHES</option>
+                            <option value="89">₱89.00 - 9 INCHES</option>
+                            <option value="179">₱179.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh5.png" style="width: 150px;">
+                        <a class="productname" >CREAMCHEESE HOTDOG</a>
+                        <select class="price-select">
+                            <option value="69">₱69.00 - 6 INCHES</option>
+                            <option value="89">₱89.00 - 9 INCHES</option>
+                            <option value="179">₱179.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh6.png" style="width: 150px;">
+                        <a class="productname" >PIZZA HOTDOG</a>
+                        <select class="price-select">
+                            <option value="72">₱72.00 - 6 INCHES</option>
+                            <option value="95">₱95.00 - 9 INCHES</option>
+                            <option value="195">₱195.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh7.png" style="width: 150px;">
+                        <a class="productname" >FOURCHEESE HOTDOG</a>
+                        <select class="price-select">
+                            <option value="75">₱75.00 - 6 INCHES</option>
+                            <option value="95">₱95.00 - 9 INCHES</option>
+                            <option value="195">₱195.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh8.png" style="width: 150px;">
+                        <a class="productname" style="font-size: 13PX;">CHEESY-BACON MUSHROOM</a>
+                        <select class="price-select">
+                            <option value="75">₱75.00 - 6 INCHES</option>
+                            <option value="95">₱95.00 - 9 INCHES</option>
+                            <option value="199">₱199.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh9.png" style="width: 150px;">
+                        <a class="productname">ALOHA HOTDOG</a>
+                        <select class="price-select">
+                            <option value="75">₱75.00 - 6 INCHES</option>
+                            <option value="95">₱95.00 - 9 INCHES</option>
+                            <option value="199">₱199.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh10.png" style="width: 150px;">
+                        <a class="productname">TACO HOTDOG</a>
+                        <select class="price-select">
+                            <option value="75">₱75.00 - 6 INCHES</option>
+                            <option value="95">₱95.00 - 9 INCHES</option>
+                            <option value="199">₱199.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh11.png" style="width: 150px;">
+                        <a class="productname">CHEESY-FRIES HOTDOG</a>
+                        <select class="price-select">
+                            <option value="75">₱75.00 - 6 INCHES</option>
+                            <option value="95">₱95.00 - 9 INCHES</option>
+                            <option value="199">₱199.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+                <div class="product itemcontainer">
+                    <div class="hotdogitem"><img src="./images/hotdogs/BBh11.png" style="width: 150px;">
+                        <a class="productname">MEATY HOTDOG</a>
+                        <select class="price-select">
+                            <option value="79">₱79.00 - 6 INCHES</option>
+                            <option value="105">₱105.00 - 9 INCHES</option>
+                            <option value="219">₱219.00 - 18 INCHES</option>
+                        </select>
+                        <button class="addtocart">
+                            <div class="addbutton">
+                            <div class="addbutton-wrapper">
+                            <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                <span class="addicon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                            </div>
+                            </div>
+                        </button> 
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="burgeritemcontainer section" style="display: none;" id="section1">
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb1.png" style="width: 150px;">
+                    <a class="productname">CLASSIC BURGER</a>
+                    <p class="price" data-price="69">₱69.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb2.png" style="width: 150px;">
+                    <a class="productname">CHEESY LOADED </a>
+                    <p class="price" data-price="79">₱79.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb3.png" style="width: 150px;">
+                    <a class="productname">VEGGIE SHAWARMA</a>
+                    <p class="price" data-price="89">₱89.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb4.png" style="width: 150px;">
+                    <a class="productname" style="font-size: 13PX;">CHEESY-BACON MUSHROOM</a>
+                    <p class="price" data-price="95">₱95.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb5.png" style="width: 150px;">
+                    <a class="productname">PIZZA BURGER</a>
+                    <p class="price" data-price="95">₱95.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb6.png" style="width: 150px;">
+                    <a class="productname">FOURCHEESE BURGER</a>
+                    <p class="price" data-price="95">₱95.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb7.png" style="width: 150px;">
+                    <a class="productname">NAKED BURGER</a>
+                    <p class="price" data-price="95">₱95.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb8.png" style="width: 150px;">
+                    <a class="productname">CHEESY-FRIES BURGER</a>
+                    <p class="price" data-price="119">₱119.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb9.png" style="width: 150px;">
+                    <a class="productname">CHEESY-DOG BURGER</a>
+                    <p class="price" data-price="119">₱119.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+    
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb10.png" style="width: 150px;">
+                    <a class="productname">ALOHA BURGER</a>
+                    <p class="price" data-price="119">₱119.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb11.png" style="width: 150px;">
+                    <a class="productname">BIG BURGER</a>
+                    <p class="price" data-price="299">₱299.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="burger-item"><img src="./images/burgers/BBb11.png" style="width: 150px;">
+                    <a class="productname">BIG PIZZA BURGER</a>
+                    <p class="price" data-price="379">₱379.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="sidemealitemcontainer section" style="display: none;" id="section2">
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs1.png" style="width: 150px;">
+                    <a class="productname" >CLASSIC FRIES</a>
+                    <select class="price-select">
+                        <option value="35">₱35.00 - SOLO</option>
+                        <option value="65">₱65.00 - MEDIUM</option>
+                        <option value="85">₱85.00 - LARGE</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs2.png" style="width: 150px;">
+                    <a class="productname">HAM N' CHEESE FRIES </a>
+                    <p class="price" data-price="99">₱99.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs3.png" style="width: 150px;">
+                    <a class="productname">CHEESY NACHOS </a>
+                    <p class="price" data-price="99">₱99.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs4.png" style="width: 150px;">
+                    <a class="productname">NACHOS OVERLOAD</a>
+                    <p class="price" data-price="139">₱139.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs5.png" style="width: 150px;">
+                    <a class="productname">CHEESESTICKS</a>
+                    <p class="price" data-price="65">₱65.00 - 5 PIECES</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs6.png" style="width: 150px;">
+                    <a class="productname">MOZZABALLS</a>
+                    <p class="price" data-price="75">₱75.00 - 5 PIECES</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs7.png" style="width: 150px;">
+                    <a class="productname">CHICKENWINGS N FRIES</a>
+                    <p class="price" data-price="165">₱165.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs8.png" style="width: 150px;">
+                    <a class="productname" >CORNDOG</a>
+                    <select class="price-select">
+                        <option value="89">₱89.00 - CLASSIC</option>
+                        <option value="99">₱99.00 - COMBI</option>
+                        <!-- <option value="85">₱85.00 - LARGE</option> -->
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="sidemeal-item"><img src="./images/sidedish/BBs9.png" style="width: 150px;">
+                    <a class="productname">FRIES AND DRINKS</a>
+                    <p class="price" data-price="65">₱65.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="sidemeal-item">
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="ricemealitemcontainer section" style="display: none;" >
+
+            <div class="product itemcontainer">
+                <div class="ricemeal-item"><img src="./images/ricemeal/BBr1.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 60px; font-size: smaller;"> w/ DRINKS</a>
+                    <a class="productname" >2 PCS. CHEESEDOG RICE</a>
+                    <select class="price-select">
+                        <option value="79">₱79.00 - 1 PC.</option>
+                        <option value="95">₱95.00 - + EGG</option>
+                        <option value="95">₱95.00 - + ALA'KING</option>
+                        <option value="105">₱105.00 - 2 PCS.</option>
+                        <option value="120">₱120.00 - + EGG</option>
+                        <option value="120">₱120.00 - + ALA'KING</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="ricemeal-item"><img src="./images/ricemeal/BBr2.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 60px; font-size: smaller;"> w/ DRINKS</a>
+                    <a class="productname" >BURGER PATTY RICE</a>
+                    <select class="price-select">
+                        <option value="99">₱99.00 - 1 PC.</option>
+                        <option value="115">₱115.00 - w/ EGG</option>
+                        <option value="129">₱129.00 - 2 PCS.</option>
+                        <option value="145">₱145.00 - w/ EGG</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="ricemeal-item"><img src="./images/ricemeal/BBr3.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 60px; font-size: smaller;"> w/ DRINKS</a>
+                    <a class="productname" >BURGER STEAK RICE</a>
+                    <select class="price-select">
+                        <option value="109">₱109.00 - 1 PC.</option>
+                        <option value="149">₱149.00 - 2 PCS.</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="ricemeal-item"><img src="./images/ricemeal/BBr4.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 60px; font-size: smaller;"> w/ DRINKS</a>
+                    <a class="productname" >BURGER RICE A LA KING</a>
+                    <select class="price-select">
+                        <option value="109">₱109.00 - 1 PC.</option>
+                        <option value="149">₱149.00 - 2 PCS.</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="ricemeal-item"><img src="./images/ricemeal/BBr5.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 75px; font-size: smaller;"> + DRINKS</a>
+                    <a class="productname">CHICKEN WINGS RICE</a>
+                    <p class="price" data-price="159">₱159.00 - 4 PIECES</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="ricemeal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="ricemeal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="ricemeal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="ricemeal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="ricemeal-item">
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="pastamealitemcontainer section" style="display: none;" > 
+
+            <div class="product itemcontainer">
+                <div class="pastameal-item"><img src="./images/pastameal/BBp1.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 75px; font-size: smaller;"> + DRINKS</a> -->
+                    <a class="productname">CARBONARA</a>
+                    <p class="price" data-price="95">₱95.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="pastameal-item"><img src="./images/pastameal/BBp2.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 75px; font-size: smaller;"> + DRINKS</a> -->
+                    <a class="productname">TUNA PASTA</a>
+                    <p class="price" data-price="95">₱95.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+            
+            <div class="product itemcontainer">
+                <div class="pastameal-item"><img src="./images/pastameal/BBp3.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 75px; font-size: smaller;"> + DRINKS</a> -->
+                    <a class="productname">NO-BAKE MACARONI</a>
+                    <p class="price" data-price="95">₱95.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="pastameal-item"><img src="./images/pastameal/BBp4.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 75px; font-size: smaller;"> + ANY FLAVOR CHICKEN WINGS</a>
+                    <a class="productname">CARBONARA</a>
+                    <p class="price" data-price="159">₱159.00 - 2 PCS.</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="pastameal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="pastameal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="pastameal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="pastameal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="pastameal-item">
+                </div>
+            </div>
+            
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="pastameal-item">
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="drinksitemcontainer section" style="display: none;" id="section3" >
+
+            <div class="product itemcontainer">
+                <div class="drinks-item"><img src="./images/drinks/BBd6.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> w/ DRINKS</a> -->
+                    <a class="productname" >RED ICED TEA</a>
+                    <select class="price-select">
+                        <option value="39">₱39.00 - REGULAR</option>
+                        <option value="49">₱49.00 - LARGE</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="drinks-item"><img src="./images/drinks/BBd1.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> w/ DRINKS</a> -->
+                    <a class="productname" >GREEN APPLE SLUSHY</a>
+                    <select class="price-select">
+                        <option value="75">₱75.00 - REGULAR</option>
+                        <option value="85">₱85.00 - LARGE</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="drinks-item"><img src="./images/drinks/BBd2.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> w/ DRINKS</a> -->
+                    <a class="productname" >BLUEBERRY SLUSHY</a>
+                    <select class="price-select">
+                        <option value="75">₱75.00 - REGULAR</option>
+                        <option value="85">₱85.00 - LARGE</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="drinks-item"><img src="./images/drinks/BBd3.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 60px; font-size: smaller;">SLUSHY</a>
+                    <a class="productname" >STRAWBERRY LEMON</a>
+                    <select class="price-select">
+                        <option value="75">₱75.00 - REGULAR</option>
+                        <option value="85">₱85.00 - LARGE</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="drinks-item"><img src="./images/drinks/BBd5.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;">SLUSHY</a> -->
+                    <a class="productname" >OREO CREAM FRAPPE</a>
+                    <select class="price-select">
+                        <option value="89">₱89.00 - REGULAR</option>
+                        <option value="99">₱99.00 - LARGE</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+            
+            <div class="product itemcontainer">
+                <div class="drinks-item"><img src="./images/drinks/BBd4.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;">SLUSHY</a> -->
+                    <a class="productname" >CHOCO FRAPPE</a>
+                    <select class="price-select">
+                        <option value="89">₱89.00 - REGULAR</option>
+                        <option value="99">₱99.00 - LARGE</option>
+                    </select>
+                            <button class="addtocart">
+                                <div class="addbutton">
+                                <div class="addbutton-wrapper">
+                                <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                                    <span class="addicon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                                    </span>
+                                </div>
+                                </div>
+                            </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="drinks-item">
+                </div>
+            </div>
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="drinks-item">
+                </div>
+            </div>
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="drinks-item">
+                </div>
+            </div>
+            <div class="product itemcontainer" style="background: transparent">
+                <div class="drinks-item">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bundlesitemcontainer section" style="display: none;" id="bundlesection">
+            
+            <div class="product itemcontainer">
+                <div class="bundles-item"><img src="./images/bundles/BBb1.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> + ANY FLAVOR CHICKEN WINGS</a> -->
+                    <a class="productname">SMALL BOX 1</a>
+                    <select class="price-select">
+                        <option value="205">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₱205.00 </option>
+                        <option value="285">₱285.00 + 3 DRINKS</option>
+                    </select>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="bundles-item"><img src="./images/bundles/BBb2.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> + ANY FLAVOR CHICKEN WINGS</a> -->
+                    <a class="productname">SMALL BOX 2</a>
+                    <select class="price-select">
+                        <option value="229">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₱229.00 </option>
+                        <option value="309">₱309.00 + 3 DRINKS</option>
+                    </select>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="bundles-item"><img src="./images/bundles/BBb3.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> + ANY FLAVOR CHICKEN WINGS</a> -->
+                    <a class="productname">JUTS IN A BOX 1</a>
+                    <select class="price-select">
+                        <option value="369">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₱369.00 </option>
+                        <option value="505">₱505.00 + 3 DRINKS</option>
+                    </select>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="bundles-item"><img src="./images/bundles/BBb4.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> + ANY FLAVOR CHICKEN WINGS</a> -->
+                    <a class="productname">JUTS IN A BOX 2</a>
+                    <select class="price-select">
+                        <option value="569">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₱569.00 </option>
+                        <option value="809">₱809.00 + 9 DRINKS</option>
+                    </select>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="bundles-item"><img src="./images/bundles/BBb5.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> + ANY FLAVOR CHICKEN WINGS</a> -->
+                    <a class="productname">JUTS N BURG</a>
+                    <select class="price-select">
+                        <option value="369">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₱369.00 </option>
+                        <option value="505">₱505.00 + 3 DRINKS</option>
+                    </select>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="bundles-item"><img src="./images/bundles/BBb5.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> + ANY FLAVOR CHICKEN WINGS</a> -->
+                    <a class="productname">DAKS IN A BOX 1</a>
+                    <select class="price-select">
+                        <option value="235">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₱235.00 </option>
+                        <option value="299">₱299.00 + 3 DRINKS</option>
+                    </select>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="bundles-item"><img src="./images/bundles/BBb7.png" style="width: 150px;">
+                    <!-- <a style="position: absolute; margin-top: 60px; font-size: smaller;"> + ANY FLAVOR CHICKEN WINGS</a> -->
+                    <a class="productname">DAKS IN A BOX 2</a>
+                    <select class="price-select">
+                        <option value="415">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₱415.00 </option>
+                        <option value="525">₱525.00 + 5 DRINKS</option>
+                    </select>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer">
+                <div class="bundles-item"><img src="./images/bundles/BBb8.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 75px; font-size: smaller;">4 - 6 PAX</a>
+                    <a class="productname">GROUP MEAL 1</a>
+                    <p class="price" data-price="739">₱739.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div>
+            </div>
+
+            <div class="product itemcontainer" style="background: transparent;">
+                <!-- <div class="bundles-item"><img src="./images/bundles/BBb9.png" style="width: 150px;">
+                    <a style="position: absolute; margin-top: 75px; font-size: smaller;">5 - 7 PAX</a>
+                    <a class="productname">GROUP MEAL 2</a>
+                    <p class="price" data-price="729">₱729.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div> -->
+            </div>
+
+            <div class="product itemcontainer" style="background: transparent;">
+                <!-- <div class="bundles-item"><img src="./images/bundles/BBb10.png" style="width: 150px;">
+                    <a class="productname">BIGBOSS MEAL</a>
+                    <p class="price" data-price="199">₱199.00</p>
+                    <button class="addtocart">
+                        <div class="addbutton">
+                        <div class="addbutton-wrapper">
+                        <div class="addtext" style="font-weight: bold; font-size: 20px;">ADD</div>
+                            <span class="addicon">
+                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                        </svg>
+                            </span>
+                        </div>
+                        </div>
+                    </button> 
+                </div> -->
+            </div>
+
+        </div>
+
+</div>
+
+</div>
+
+
+
+<nav class="bot-nav">
+    <ul class="">
+        <!-- <li><a href="https://www.facebook.com/bigbossdinertikaymalolos" class="navbot" target="_blank">About</a></li> -->
+        <li><a href="https://www.facebook.com/bigbossdinertikaymalolos" class="navbot" target="_blank">How to Order</a></li>
+        <li><a href="./storepage.html" class="navbot" target="_blank">Location</a></li>
+        <li><a href="./storepage.html" class="navbot" target="_blank">Follow Us</a></li>
+    </ul>
+    </nav>
+
+
+            <script src="scripts.js"></script>
+
+            <script>
+                function getQueryParam(param) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.get(param);
+                }
+        
+                window.onload = function() {
+                    const buttonId = getQueryParam('button');
+                    if (buttonId) {
+                        const button = document.getElementById(buttonId);
+                        if (button) {
+                            button.click();
+                        }
+                    }
+                }
+            </script>
+            
+        </body>
+
+        </html>
