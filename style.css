@@ -2,70 +2,83 @@ body{
     /* display: flex; */
     margin: auto;
     background-image: url(./images/BBhome.jpg);
+    flex-wrap: wrap;
+    height: 100%;
+    background-repeat: no-repeat;
 }
 
 /* TOP NAVBAR */
 .navbar-container {
     display: flex;
     margin-top: -16px;
+    top: -50px;
     position: absolute;
     width: 100%;
     justify-content: center; /* Center the navbar container */
+    overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .nav_links {
-    background-color: #DB3414;
-    display: flex; /* Changed from inline-block to flex */
-    width: 100%;
-    justify-content: center; /* Center the nav links */
-    align-items: center;
-    margin: auto;
-    float: right;
-    position: fixed;
-    overflow-x: hidden;
-    height: 130px;
-    top:0;
-    z-index: 10;
+  background-color: #DB3414;
+  display: flex; /* Changed from inline-block to flex */
+  width: 100%;
+  justify-content: center; /* Center the nav links */
+  align-items: center;
+  position: fixed;
+  overflow-x: hidden;
+  height: 130px;
+  top: -18px;
+  z-index: 10;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  overflow: auto;
 }
 
 .nav_links ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center; /* Center the list items */
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center; /* Center the list items */
+  flex-wrap: wrap;
 }
-.addcart{
-    display: block;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .nav_links {
+      height: auto; 
+      padding: 10px 0; 
+      
+  }
+  
+  .nav_links ul {
+      flex-direction: column; 
+      align-items: center;
+      width: 100%;
+      
+  }
+
+  .nav_links ul li {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0; 
+      
+  }
+  .bigboss-logo {
+    width: 23%;
 }
-.addcart button{
-    position: fixed;
-    z-index: 12;
-    float: right;
-    display: flex;
-    right: 0;
-    margin-right: 50px;
-    padding: 30px;
-    background: transparent;
-    border: none;
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    top: 0;
-    margin-top: 20px;
+
 }
+
 .bigboss-logo {
-    /* display: flex; */
+    display: flex;
     /* justify-content: center; */
     /* align-items: center; */
     position: fixed;
     z-index: 10;
-    margin-top: -70px;
+    top: 0;
+    /* margin-top: -70px; */
     left: 0; /* Keep the logo on the left */
 }
 
@@ -97,14 +110,17 @@ body{
 /* BANNERS */
 .allbanner-container {
     display: block;
-    flex-direction: column; /* Stack all child containers vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     margin-top: 150px;
+    position: relative;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
     /* height: 1000px; */
     /* width: 1500px; */
     /* margin: auto; */
-    
+    overflow: hidden;
 }
 
 .promo-container,
@@ -121,11 +137,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    bottom: 0;
+    position: relative;
+    margin: auto;
+    /* width: 100%; */
+    /* bottom: 0; */
+
 }
 .hotdogburgerbanner-container {
-    flex-direction: column; /* Stack hotdog and burger banners vertically */
+    flex-direction: column; 
 }
 
 .sidedrink-container {
@@ -143,53 +162,106 @@ body{
 .promo-banner:hover, .hotdog-banner:hover, .burger-banner:hover, .sidemeal-banner:hover,
 .drink-banner:hover, .bundle-banner:hover {
     transform: scale(1.03);
-    transition: 0.3s;
-}
-.bot-nav{
-    background-color: #DB3414;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    bottom: 0;
-    
+    transition: ease-in-out 0.3s ;
 }
 
-.bot-nav ul{
-    font-family: "Varela Round", sans-serif;
-    font-weight: bolder;
-    font-size: 1.3em;
-    list-style-type: none;
-    cursor: pointer;
-    display: flex;
+/* Media query for mobile view */
+@media (max-width: 600px) {
+  .promo-container,
+  .hotdogburgerbanner-container,
+  .sidedrink-container,
+  .bundle-banner {
+      flex-direction: column; /* Stack all banners vertically */
+  }
+
+  .sidedrink-container {
+      gap: 10px; 
+  }
+
+  .promo-container img,
+  .hotdogburgerbanner-container img,
+  .sidedrink-container img,
+  .bundle-banner img {
+      width: 100%; 
+      height: auto; 
+  }
 }
-.bot-nav a{
-    color:  white;
-    text-decoration: none;
-    display: flex;
-    padding: 0 40px;
-
+.bot-nav {
+  background-color: #DB3414;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position:absolute; 
+  /* bottom: 0;        */
+  left: 0;          
+  margin: 0;  
+  height: 70px;
+  overflow: hidden;
 }
 
+.bot-nav ul {
+  font-family: "Varela Round", sans-serif;
+  font-weight: bolder;
+  font-size: 1.3em;
+  list-style-type: none;
+  cursor: pointer;
+  display: flex;
+  margin: 0;        /* Reset the margin */
+  padding: 0;       /* Reset the padding */
+}
 
+.bot-nav a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  padding: 0 40px;
+}
 
 .bot-nav ul li:hover {
-    transform: scale(1.3);
-    transition: 0.3s;
-}
-.bot-nav ul li:active{
-    color: yellow;
+  transform: scale(1.3);
+  transition: 0.3s;
 }
 
+.bot-nav ul li:active {
+  color: yellow;
+}
 
 
 
 
 /* ____________________________________SELECT MENU______________________________________________________ */
+.addcart{
+  display: block;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.addcart button{
+  position: fixed;
+  z-index: 12;
+  float: right;
+  display: flex;
+  right: 0;
+  margin-right: 50px;
+  padding: 30px;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  top: 0;
+  margin-top: 20px;
+  overflow: hidden;
+}
 
 .selectmenu {
     display: flex; /* Use Flexbox for layout */
+    /* flex-wrap: wrap; */
+    overflow: scroll;
+    position: relative;
 }
 .sidebar {
     position: relative;
@@ -244,13 +316,16 @@ body{
 .selectmenu-box {
     background-image: url(./images/yellowbg.png); /* Background image */
     background-size: cover; /* Ensure background covers entire area */
-    max-width: 900px;
+    max-width: 100%;
+
     /* height: 1400px;  */
     margin-top: 150px;
     margin-left: 200px;
     margin-right: auto;
     display: block;
     position: relative;
+    /* flex-wrap: wrap; */
+    /* overflow: hidden; */
 }
 .hotdogitemcontainer, .burgeritemcontainer, .sidemealitemcontainer, .ricemealitemcontainer, .drinksitemcontainer, .bundlesitemcontainer, .pastamealitemcontainer  {
     flex-grow: 1; /* Allow it to grow to take up available space */
@@ -261,6 +336,8 @@ body{
     padding: 20px;
     row-gap: 30px; /* Fixed vertical gap */
     column-gap: 20px; /* Fixed horizontal gap */
+    flex-wrap: wrap;
+    overflow: auto;
 }
 .selectmenu-box img, .itemcontainer {
     align-items: center;
@@ -304,6 +381,57 @@ body{
     object-fit: contain;
     margin-bottom: 10px;
 }
+
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .promo-container,
+    .hotdogburgerbanner-container,
+    .sidedrink-container,
+    .bundle-banner {
+        flex-direction: column;
+    }
+
+    .sidedrink-container {
+        gap: 10px;
+    }
+
+    .promo-container img,
+    .hotdogburgerbanner-container img,
+    .sidedrink-container img,
+    .bundle-banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Align items by two in a row */
+    .hotdogitemcontainer, 
+    .burgeritemcontainer, 
+    .sidemealitemcontainer, 
+    .ricemealitemcontainer, 
+    .drinksitemcontainer, 
+    .bundlesitemcontainer, 
+    .pastamealitemcontainer {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px; /* Adjust vertical gap if needed */
+        column-gap: 15px; /* Adjust horizontal gap if needed */
+        padding: 10px; /* Adjust padding if needed */
+    }
+
+    .itemcontainer {
+        width: 100%; /* Make the item container responsive */
+        height: auto; /* Adjust height as needed */
+    }
+    .selectmenu-box{
+      height: 100%;
+      background-size: cover;
+    }
+    a, .price-select, select{
+      font-size: 1em;
+    }
+}
+
+
 
 .price {
     font-family: "Varela Round", sans-serif;
@@ -595,30 +723,40 @@ option {
 }
 
 /* ____________________________________STORE PAGE_____________________________________________________ */
-.store-content2{
+.store-info{
   display: block;
+  position: relative;
+  /* margin-bottom: 100px; */
+  overflow: visible;
+  /* flex-wrap: wrap; */
+}
+.bigbossstore-logo{
+  width: 5%;
+  display: inline-block;
+  position: absolute;
+  margin-top: -25px;
 }
 
 .imageslider-container {
   font-family: "Varela Round", sans-serif;
   display: inline-block;
-  top: 260px;
+  top: 10px;
   width: 600px;
   left: 100px;
   margin: auto;
   position: absolute;
   background: transparent ;
-  overflow: hidden;
+  /* overflow: auto; */
 }
 .imageslider-container2 {
   display: inline-block;
-  top: 1050px; /* Adjusted to move it down */
+  top: 720px; /* Adjusted to move it down */
   width: 600px;
   right: 100px;
   margin: auto;
   position: absolute;
   background: transparent;
-  overflow: hidden;
+  /* overflow: auto; */
 }
 .description{
   font-family: "Varela Round", sans-serif;
@@ -626,6 +764,7 @@ option {
   display: block;
   margin-left: 750px;
   position: relative;
+  flex-wrap: wrap;
 }
 .description2{
   font-family: "Varela Round", sans-serif;
@@ -634,9 +773,15 @@ option {
   text-align: right;
   margin-right: 750px;
   position: relative;
-}
+  flex-wrap: wrap;
 
+  margin-top: 120px;
+}
 .store-name{
+  position: relative;
+  overflow: hidden;
+}
+.store-name h1{
   font-family: "Varela Round", sans-serif;
   font-weight: bolder;
   font-size: 3em;
@@ -648,18 +793,18 @@ option {
   margin-top: 130px;
   position: relative;
 }
-.store-name2{
+/* .store-name2{
   font-family: "Varela Round", sans-serif;
   font-weight: bolder;
   font-size: 3em;
   display: block;
   text-align: right;
   justify-content: center;
-  /* margin: auto; */
   padding: 30px;
   margin-top: 130px;
   position: relative;
-}
+} */
+
 .store-content b, .store-content2 b{
   display: block;
   font-size: 1.6em;
@@ -745,9 +890,11 @@ option {
   width: 50%;
   margin-left: 19%;
   margin-top: 20px;
+  position: relative;
 }
 
 .followus2 {
+  position: relative;
   display: block;
   width: 50%;
   margin-left: 31%;
@@ -834,4 +981,135 @@ option {
 .pulilanpic{
   display: flex;
 }
+/* Media query for mobile view */
+@media (max-width: 708px) {
+  .store-info {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding-bottom: 500px;
+  }
+  .bigbossstore-logo{
+    width: 30%;
+    position: relative;
+    margin: 0;
+    margin-bottom: -100px;
+  }
 
+  .store-content, .store-content2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      flex-wrap: wrap;
+  }
+
+  .store-name, .store-name2 {
+      font-size: 1em;
+      margin-top: 20px;
+      padding: 20px 0;
+
+  }
+
+  .description {
+      font-size: 1em;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+  }
+  .description2 {
+    font-size: 1em;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+  .description a, .description2 a {
+      font-size: 1em;
+  }
+
+  .gmap {
+      width: 20%;
+      display: none;
+      /* margin: 20px 0; */
+  }
+
+  .imageslider-container{
+      width: 100%;
+      /* top: auto; */
+      position: relative;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      left: auto;
+  }
+  .imageslider-container2 {
+    width: 100%;
+    /* top: auto; */
+    position: relative;
+    /* margin: 20px 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: auto;
+}
+
+  .imageslider-container img, .imageslider-container2 img {
+      width: 100%;
+      height: auto;
+  }
+
+  .arrow {
+      font-size: 1.5rem;
+  }
+
+  .dots {
+      bottom: 10px;
+  }
+
+  .dot {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1rem;
+  }
+
+  .followus{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+  }
+  .followus2 {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+  .followus a, .followus2 a {
+      height: 35px;
+      width: 35px;
+      margin: 0 10px;
+  }
+
+  .followus a i, .followus2 a i {
+      font-size: 30px;
+  }
+
+  .Social-media {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+}
