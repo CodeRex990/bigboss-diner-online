@@ -1,59 +1,124 @@
 body{
-    /* display: flex; */
+    display: flex;
     margin: auto;
     background-image: url(./images/BBhome.jpg);
     flex-wrap: wrap;
-    height: 100%;
-    background-repeat: no-repeat;
+    height: auto;
+    background-repeat: repeat-y;
 }
 
 /* TOP NAVBAR */
 .navbar-container {
-    display: flex;
-    margin-top: -16px;
-    top: -50px;
-    position: absolute;
-    width: 100%;
-    justify-content: center; /* Center the navbar container */
-    overflow: hidden;
-    flex-wrap: wrap;
-}
-
-.nav_links {
-  background-color: #DB3414;
-  display: flex; /* Changed from inline-block to flex */
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  justify-content: center; /* Center the nav links */
+  justify-content: center; 
+  flex-wrap: nowrap;
   align-items: center;
-  position: fixed;
-  overflow-x: hidden;
-  height: 130px;
-  top: -18px;
-  z-index: 10;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-  overflow: auto;
+  background-color: #DB3414;
+  height: 100%;
 }
 
+.bigboss-logo {
+  position: absolute;
+  z-index: 10;
+  width:250px;
+  top: 0;
+  left: 0; 
+}
+.nav_links {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  /* overflow: visible; */
+  /* z-index: 10; */
+  flex-wrap: wrap; 
+}
 .nav_links ul {
+  list-style-position: inside;
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center; /* Center the list items */
-  flex-wrap: wrap;
+
 }
+.nav_links li {
+  font-family: "Varela Round", sans-serif;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px; 
+}
+
+.nav_links a {
+  font-weight: bolder;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.nav_links li:hover a {
+  transform: scale(1.3);
+  transition: 0.3s;
+  color: yellow;
+}
+    /* BOTTOM NAVBAR */
+.bot-nav {
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  width: 100%;
+  justify-content: center; 
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #DB3414;
+  /* padding: 5px; */
+}
+
+.bot-nav ul {
+  list-style-position: inside;
+  list-style: none;
+  display: flex;
+
+}
+
+.bot-nav a {
+  font-weight: bolder;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bot-nav li{
+  font-family: "Varela Round", sans-serif;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 15px;  */
+}
+.bot-nav ul li:hover a{
+  transform: scale(1.3);
+  transition: 0.3s;
+  color: yellow;
+
+}
+
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   .nav_links {
       height: auto; 
-      padding: 10px 0; 
-      
+      width: 100%;
+      padding:0 ;      
   }
   
   .nav_links ul {
-      flex-direction: column; 
+      /* flex-direction: column;  */
       align-items: center;
       width: 100%;
       
@@ -62,65 +127,31 @@ body{
   .nav_links ul li {
       width: 100%;
       text-align: center;
-      padding: 10px 0; 
+      /* padding: 10px 0;  */
       
   }
   .bigboss-logo {
-    width: 23%;
+    width: 25%;
 }
 
 }
 
-.bigboss-logo {
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    /* margin-top: -70px; */
-    left: 0; /* Keep the logo on the left */
-}
-
-.nav_links li {
-    font-family: "Varela Round", sans-serif;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 15px; /* Added horizontal margin to space out the items */
-}
-
-.nav_links a {
-    font-weight: bolder;
-    font-size: 1.3em;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-.nav_links li:hover a {
-    transform: scale(1.3);
-    transition: 0.3s;
-    color: yellow;
-}
 
 
 /* BANNERS */
 .allbanner-container {
-    display: block;
-    flex-direction: column; 
+    display: flex;
+    /* flex-direction: column;  */
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
-    position: relative;
-    margin-bottom: 50px;
+    /* margin-top: 150px; */
+    /* position: relative; */
+    /* margin-bottom: 50px; */
     flex-wrap: wrap;
     /* height: 1000px; */
     /* width: 1500px; */
     /* margin: auto; */
-    overflow: hidden;
+    overflow: visible;
 }
 
 .promo-container,
@@ -135,9 +166,9 @@ body{
 }
 .bundle-banner{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: relative; */
     margin: auto;
     /* width: 100%; */
     /* bottom: 0; */
@@ -166,7 +197,7 @@ body{
 }
 
 /* Media query for mobile view */
-@media (max-width: 600px) {
+@media (max-width: 708px) {
   .promo-container,
   .hotdogburgerbanner-container,
   .sidedrink-container,
@@ -186,65 +217,22 @@ body{
       height: auto; 
   }
 }
-.bot-nav {
-  background-color: #DB3414;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  position:absolute; 
-  /* bottom: 0;        */
-  left: 0;          
-  margin: 0;  
-  height: 70px;
-  overflow: hidden;
-}
-
-.bot-nav ul {
-  font-family: "Varela Round", sans-serif;
-  font-weight: bolder;
-  font-size: 1.3em;
-  list-style-type: none;
-  cursor: pointer;
-  display: flex;
-  margin: 0;        /* Reset the margin */
-  padding: 0;       /* Reset the padding */
-}
-
-.bot-nav a {
-  color: white;
-  text-decoration: none;
-  display: flex;
-  padding: 0 40px;
-}
-
-.bot-nav ul li:hover {
-  transform: scale(1.3);
-  transition: 0.3s;
-}
-
-.bot-nav ul li:active {
-  color: yellow;
-}
-
 
 
 
 /* ____________________________________SELECT MENU______________________________________________________ */
 .addcart{
-  display: block;
+  display: flex;
   margin: auto;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 .addcart button{
-  position: fixed;
   z-index: 12;
   float: right;
-  display: flex;
+  /* display: flex; */
   right: 0;
-  margin-right: 50px;
   padding: 30px;
   background: transparent;
   border: none;
@@ -252,24 +240,29 @@ body{
   font-weight: bold;
   color: white;
   cursor: pointer;
-  top: 0;
-  margin-top: 20px;
-  overflow: hidden;
+  /* top: 0; */
+  /* margin-top: 20px; */
+  /* overflow: hidden; */
 }
 
 .selectmenu {
-    display: flex; /* Use Flexbox for layout */
-    /* flex-wrap: wrap; */
-    overflow: scroll;
-    position: relative;
+    display: flex; 
+    /* flex-wrap: nowrap; */
+    /* overflow: visible; */
+    /* position: relative; */
 }
 .sidebar {
-    position: relative;
-    max-width: 200px;
-    display: block;
+    /* position: fixed; */
+    /* top: 0; */
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
     height: 600px;
-    left: 120px;
-    margin-top: 150px;
+    padding: 30px;
+    /* height: auto; */
+    /* left: 120px; */
+    /* margin-top: 150px; */
 }
 .sidebar button {
     display: flex;
@@ -277,9 +270,9 @@ body{
     justify-content: center;
     background: #DB3414;
     padding: 20px;
-    width: 220px;
+    /* width: 220px; */
     height: 90px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     border: none;
     
 }
@@ -312,46 +305,46 @@ body{
 }
 
 
-
 .selectmenu-box {
-    background-image: url(./images/yellowbg.png); /* Background image */
-    background-size: cover; /* Ensure background covers entire area */
-    max-width: 100%;
-
+    background-image: url(./images/yellowbg.png);
+    background-size: cover; 
+    max-width: 900px;
+    display: flex;
     /* height: 1400px;  */
-    margin-top: 150px;
-    margin-left: 200px;
-    margin-right: auto;
-    display: block;
-    position: relative;
+    /* margin-top: 150px; */
+    /* margin-left: 200px; */
+    /* margin-right: auto; */
+    margin: 40px;
+    /* position: relative; */
     /* flex-wrap: wrap; */
-    /* overflow: hidden; */
+    /* overflow: visible; */
+    height: auto;
 }
 .hotdogitemcontainer, .burgeritemcontainer, .sidemealitemcontainer, .ricemealitemcontainer, .drinksitemcontainer, .bundlesitemcontainer, .pastamealitemcontainer  {
-    flex-grow: 1; /* Allow it to grow to take up available space */
+    flex-grow: 1; 
     grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-    display: grid;
-    max-width: 900px;
-    height: 1200px; /* Fixed height */
-    padding: 20px;
-    row-gap: 30px; /* Fixed vertical gap */
-    column-gap: 20px; /* Fixed horizontal gap */
+    display: flex;
+    width: 50%;
+    height: auto;
+    padding: 40px;
+    row-gap: 30px; 
+    column-gap: 20px; 
     flex-wrap: wrap;
-    overflow: auto;
+    overflow: visible;
 }
 .selectmenu-box img, .itemcontainer {
     align-items: center;
 }
 .itemcontainer {
     display: flex;
-    flex-direction: column; /* Ensure contents stack vertically */
+    flex-direction: column; 
     background: white;
     width: 250px;
     height: 250px;
     padding: 20px;
     align-items: center;
-    justify-content: center; /* Center contents vertically */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    justify-content: center;
+    box-sizing: border-box; 
 }
 .hotdogitem, .burger-item,
 .sidemeal-item, .ricemeal-item, .pastameal-item, 
@@ -381,57 +374,6 @@ body{
     object-fit: contain;
     margin-bottom: 10px;
 }
-
-
-/* Media query for mobile view */
-@media (max-width: 768px) {
-    .promo-container,
-    .hotdogburgerbanner-container,
-    .sidedrink-container,
-    .bundle-banner {
-        flex-direction: column;
-    }
-
-    .sidedrink-container {
-        gap: 10px;
-    }
-
-    .promo-container img,
-    .hotdogburgerbanner-container img,
-    .sidedrink-container img,
-    .bundle-banner img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Align items by two in a row */
-    .hotdogitemcontainer, 
-    .burgeritemcontainer, 
-    .sidemealitemcontainer, 
-    .ricemealitemcontainer, 
-    .drinksitemcontainer, 
-    .bundlesitemcontainer, 
-    .pastamealitemcontainer {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 20px; /* Adjust vertical gap if needed */
-        column-gap: 15px; /* Adjust horizontal gap if needed */
-        padding: 10px; /* Adjust padding if needed */
-    }
-
-    .itemcontainer {
-        width: 100%; /* Make the item container responsive */
-        height: auto; /* Adjust height as needed */
-    }
-    .selectmenu-box{
-      height: 100%;
-      background-size: cover;
-    }
-    a, .price-select, select{
-      font-size: 1em;
-    }
-}
-
-
 
 .price {
     font-family: "Varela Round", sans-serif;
@@ -593,59 +535,27 @@ select{
     bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
   }
   
-/* ____________________________________CART_____________________________________________________ */
-
-/* .cart-container {
-
-    display: flexbox;
-    flex-direction: column;
-}
-
-.cart {
-    margin-top: 150px;
-    display: flex;
-    position: relative;
-    background: white;
-    
-    float: right;
-    right: 10px;
-    width: 600px;
-    height: 800px;
-    flex-direction: row;
-}
-
-.cart-box {
-    justify-content: center;
-    display: flex;
-}
-.cart-box span{
-    font-family: "Varela Round", sans-serif;
-    padding: 20px;
-} */
-
+/* CART */
 .cart-container {
-    /* border:1px solid #E0E4CC; */
-    /* border-radius:5px; */
     font-family: "Varela Round", sans-serif;
-    margin-top:150px;
-    padding:1em;
+    margin-top: 13em;
     position: fixed;
     float: right;
     right: -100%;
-    width: 560px;
+    width: 34%;
     /* height: 800px; */
     background: white;
     display: none;
     align-items: center;
-    margin-left: auto ;
-    margin-right: auto ;
+    /* margin-left: auto ; */
+    /* margin-right: auto ; */
     justify-content: center;
     transform: translateX(100%);
     transition: transform 1s ease-in-out;
     z-index: 1000;
   }
 .cart-container.show{
-    display: block;
+    display: flex;
     right: 20px;
     transform: translateX(0);
 }
@@ -705,15 +615,15 @@ select{
     border-width: 1px 0px;
     border-style:solid;
     border-color:#A7DBD8;
-    color:#679996;
+    color:#000000;
     padding:0.5em 0;
     margin:1em 0;
     position: absolute;
   }
 
-.alerts {
+#alerts {
     position: absolute;
-    display: block;
+    display: none;
     
 }
 
@@ -722,96 +632,237 @@ option {
     font-weight: bold;
 }
 
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .promo-container,
+  .hotdogburgerbanner-container,
+  .sidedrink-container,
+  .bundle-banner {
+      flex-direction: column;
+  }
+
+  .sidedrink-container {
+      gap: 10px;
+  }
+
+  .promo-container img,
+  .hotdogburgerbanner-container img,
+  .sidedrink-container img,
+  .bundle-banner img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* Align items by two in a row */
+  .hotdogitemcontainer, 
+  .burgeritemcontainer, 
+  .sidemealitemcontainer, 
+  .ricemealitemcontainer, 
+  .drinksitemcontainer, 
+  .bundlesitemcontainer, 
+  .pastamealitemcontainer {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px; /* Adjust vertical gap if needed */
+      column-gap: 15px; /* Adjust horizontal gap if needed */
+      padding: 10px; /* Adjust padding if needed */
+  }
+
+  .itemcontainer {
+      width: 100%; /* Make the item container responsive */
+      height: auto; /* Adjust height as needed */
+  }
+
+  .selectmenu-box{
+    height: 100%;
+    background-size: cover;
+    background-repeat: repeat-y;
+    margin-left: 300px;
+  }
+  .sidebar{
+    top: 20;
+    /* bottom: 20; */
+    position: fixed;
+  }
+  .sidebar button{
+    height: 55px;
+  }
+  .sidebar a{
+    padding: 0;
+    font-size: 1.7em; 
+  }
+  a, .price-select, select{
+    font-size: 1em;
+  }
+  .cart-container{
+    width: 500px;
+    display: flex;
+    top: 0;
+    margin: 10em 10%;
+    height: auto;
+    /* overflow: visible; */
+    
+  }
+
+}
+
+
 /* ____________________________________STORE PAGE_____________________________________________________ */
-.store-info{
-  display: block;
-  position: relative;
-  /* margin-bottom: 100px; */
-  overflow: visible;
-  /* flex-wrap: wrap; */
-}
-.bigbossstore-logo{
-  width: 5%;
-  display: inline-block;
-  position: absolute;
-  margin-top: -25px;
-}
-
-.imageslider-container {
-  font-family: "Varela Round", sans-serif;
-  display: inline-block;
-  top: 10px;
-  width: 600px;
-  left: 100px;
-  margin: auto;
-  position: absolute;
-  background: transparent ;
-  /* overflow: auto; */
-}
-.imageslider-container2 {
-  display: inline-block;
-  top: 720px; /* Adjusted to move it down */
-  width: 600px;
-  right: 100px;
-  margin: auto;
-  position: absolute;
-  background: transparent;
-  /* overflow: auto; */
-}
-.description{
-  font-family: "Varela Round", sans-serif;
-  /* float: right; */
-  display: block;
-  margin-left: 750px;
-  position: relative;
+.info-container{
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-}
-.description2{
-  font-family: "Varela Round", sans-serif;
-  /* float: right; */
-  display: block;
-  text-align: right;
-  margin-right: 750px;
-  position: relative;
-  flex-wrap: wrap;
-
-  margin-top: 120px;
 }
 .store-name{
-  position: relative;
-  overflow: hidden;
+  overflow: visible;
+  margin: 0;
 }
 .store-name h1{
   font-family: "Varela Round", sans-serif;
   font-weight: bolder;
   font-size: 3em;
-  display: block;
+  /* display: flex; */
   text-align: center;
   justify-content: center;
   /* margin: auto; */
-  padding: 30px;
-  margin-top: 130px;
-  position: relative;
+  /* padding: 30px; */
+  /* margin-top: 130px; */
+  /* position: relative; */
 }
-/* .store-name2{
+.bigbossstore-logo{
+  width: 5%;
+  /* display: flex; */
+  /* position: absolute; */
+  /* margin-top: -25px; */
+}
+.store-info{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* position: relative; */
+  /* margin-bottom: 100px; */
+  /* overflow: visible; */
+}
+.store-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.imageslider-container {
   font-family: "Varela Round", sans-serif;
-  font-weight: bolder;
-  font-size: 3em;
-  display: block;
-  text-align: right;
-  justify-content: center;
-  padding: 30px;
-  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 30px;
+
+  background: transparent ;
+  row-gap: 0;
+
+}
+.description{
+  /* padding-top: 50px; */
+  font-family: "Varela Round", sans-serif;
+  float: right;
+  display: flex;
+  margin: 10px;
+  width: 770px;
   position: relative;
-} */
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.followus {
+  display: flex;
+  width: 50%;
+  padding: 10px;
+
+}
+
+.imageslide {
+  display: flex;
+  margin-top: 0;
+  /* width: 600px; */
+
+}
+.imageslider-container {
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 30px;
+  /* left: 100px; */
+  /* margin: auto; */
+  /* position: absolute; */
+  background: transparent ;
+  row-gap: 0;
+  /* overflow: auto; */
+}
+.description{
+  padding-top: 50px;
+  font-family: "Varela Round", sans-serif;
+  float: right;
+  display: flex;
+  margin: 10px;
+  width: 770px;
+  /* margin-left: 750px; */
+  position: relative;
+  /* padding-left: 200px; */
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.followus {
+  display: flex;
+  width: 50%;
+  padding: 10px;
+  /* margin-left: 19%; */
+  /* margin-top: 20px; */
+  /* position: relative; */
+}
+.arrows-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  top: 320px;
+  padding: 10px;
+}
+.arrow {
+  /* transform: translateY(-50%); */
+  font-size: 2rem;
+  color: white;
+  z-index: 9;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+.dots {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  opacity: 1;
+
+
+}
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
+}
 
 .store-content b, .store-content2 b{
-  display: block;
+  /* display: block; */
   font-size: 1.6em;
   
 }
 .store-content a, .store-content2 a{
-  display: block;
+  /* display: block; */
   font-size: 1.4em;
 }
 
@@ -819,7 +870,7 @@ option {
   /* width: 100%; */
   /* height: 100%;  */
   object-fit: cover;
-  position: relative;
+  /* position: relative; */
   top: 0;
   bottom: 0;
   left: 0;
@@ -830,44 +881,9 @@ option {
 
 .imageslider-container img:first-child,
 .imageslider-container2 img:first-child {
-  display: block;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: white;
-  z-index: 9;
-  opacity: 0.5;
-  transition: opacity 0.5s;
-}
-
-.arrow:hover {
-  cursor: pointer;
-  opacity: 1;
-}
-
-.arrow-left {
-  left: 2%;
-}
-
-.arrow-right {
-  right: 2%;
-}
-
-.dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 2%;
   display: flex;
-  justify-content: center;
-  z-index: 5;
-
-
 }
+
 
 .dot {
   width: 2rem;
@@ -885,21 +901,8 @@ option {
   from { opacity: 0.1; }
   to { opacity: 1; }
 }
-.followus {
-  display: block;
-  width: 50%;
-  margin-left: 19%;
-  margin-top: 20px;
-  position: relative;
-}
 
-.followus2 {
-  position: relative;
-  display: block;
-  width: 50%;
-  margin-left: 31%;
-  margin-top: 20px;
-}
+
 .followus h1, .followus2 h1{
   font-family: sans-serif;
   font-weight: normal;
@@ -961,6 +964,41 @@ option {
 .followus a:hover .fa-youtube{
   color: #f00;
 }
+.imageslider-container2 {
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 30px;
+  /* left: 100px; */
+  /* margin: auto; */
+  /* position: absolute; */
+  background: transparent ;
+  row-gap: 0;
+  /* overflow: auto; */
+}
+.description2{
+  padding-top: 50px;
+  font-family: "Varela Round", sans-serif;
+  float: left;
+  display: flex;
+  margin: 10px;
+  width: 770px;
+  /* margin-left: 750px; */
+  position: relative;
+  /* padding-left: 200px; */
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.followus2 {
+  display: flex;
+  width: 50%;
+  padding: 10px;
+  /* margin-left: 19%; */
+  /* margin-top: 20px; */
+  /* position: relative; */
+}
+
 
 .gmap{
   display: inline-block;
@@ -975,141 +1013,77 @@ option {
   background-image: url(images/gmapstikay.PNG); 
 }
 
-.pulilan{
-  display: block;
-}
-.pulilanpic{
-  display: flex;
-}
+
 /* Media query for mobile view */
-@media (max-width: 708px) {
-  .store-info {
-      padding: 10px;
+  @media (max-width: 709px) {
+    .info-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
-      padding-bottom: 500px;
-  }
-  .bigbossstore-logo{
-    width: 30%;
-    position: relative;
-    margin: 0;
-    margin-bottom: -100px;
-  }
-
-  .store-content, .store-content2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin: 0;
-      padding: 20px 0;
-      text-align: center;
-      position: relative;
+      justify-content: center;
       flex-wrap: wrap;
-  }
-
-  .store-name, .store-name2 {
-      font-size: 1em;
-      margin-top: 20px;
-      padding: 20px 0;
-
-  }
-
-  .description {
-      font-size: 1em;
-      margin: 0 auto;
-      text-align: center;
-      padding: 20px;
-  }
-  .description2 {
-    font-size: 1em;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}
-  .description a, .description2 a {
-      font-size: 1em;
-  }
-
-  .gmap {
-      width: 20%;
-      display: none;
-      /* margin: 20px 0; */
-  }
-
-  .imageslider-container{
       width: 100%;
-      /* top: auto; */
-      position: relative;
-      margin: 20px 0;
-      display: flex;
+    }
+    .store-name, .store-info, .store-content,.store-content2, .description, .description2, .followus, .followus2, .arrows-container, .dots, .gmap {
+      width: 100%;
+      text-align: center;
+      /* overflow: hidden; */
+      align-items: center;
+    }
+    .store-name h1 {
+      font-size: 2em;
+    }
+    .bigbossstore-logo {
+      width: 10%;
+      margin: 0 auto;
+    }
+    .store-info {
       flex-direction: column;
       align-items: center;
-      left: auto;
-  }
-  .imageslider-container2 {
-    width: 100%;
-    /* top: auto; */
-    position: relative;
-    /* margin: 20px 0; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    right: auto;
-}
-
-  .imageslider-container img, .imageslider-container2 img {
-      width: 100%;
-      height: auto;
-  }
-
-  .arrow {
+    }
+    .store-content, .store-content2 {
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .description {
+      width: 90%;
+    }
+    .followus, .followus2 {
+      width: 90%;
+      justify-content: center;
+    }
+    .arrows-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .arrow {
       font-size: 1.5rem;
-  }
-
-  .dots {
-      bottom: 10px;
-  }
-
-  .dot {
+    }
+    .dot {
       width: 1.5rem;
       height: 1.5rem;
       font-size: 1rem;
-  }
-
-  .followus{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin: auto;
-  }
-  .followus2 {
-    width: 100%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-}
-
-  .followus a, .followus2 a {
+    }
+    .followus h1 {
+      padding: 100px 0 50px;
+    }
+    .store-content a, .store-content2 a{
+      font-size: 1em;
+      width: 80%;
+    }
+    .followus a {
       height: 35px;
       width: 35px;
       margin: 0 10px;
+    }
+    .followus a i {
+      font-size: 40px;
+    }
+    .gmap {
+      width: 50%;
+      display: none;
+    }
   }
 
-  .followus a i, .followus2 a i {
-      font-size: 30px;
-  }
-
-  .Social-media {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-  }
-}
