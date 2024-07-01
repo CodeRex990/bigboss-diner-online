@@ -110,7 +110,7 @@ body{
 
 
 /* Media queries for responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .nav_links {
       height: auto; 
       width: 100%;
@@ -197,7 +197,7 @@ body{
 }
 
 /* Media query for mobile view */
-@media (max-width: 708px) {
+@media (max-width: 1080px) {
   .promo-container,
   .hotdogburgerbanner-container,
   .sidedrink-container,
@@ -633,7 +633,7 @@ option {
 }
 
 /* Media query for mobile view */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .promo-container,
   .hotdogburgerbanner-container,
   .sidedrink-container,
@@ -702,7 +702,10 @@ option {
     /* overflow: visible; */
     
   }
-
+  .addcart{
+    padding: 0;
+    margin: 0;
+  }
 }
 
 
@@ -1015,7 +1018,7 @@ option {
 
 
 /* Media query for mobile view */
-  @media (max-width: 709px) {
+  @media (max-width: 1080px) {
     .info-container {
       display: flex;
       flex-direction: column;
